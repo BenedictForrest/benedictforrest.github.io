@@ -110,9 +110,10 @@
     text-align: center;
   }
 
-  a:not(:has(svg)) {
+  .article a {
     color: var(--color-text-secondary);
-    text-decoration: underline dotted;
+    text-decoration: underline;
+    text-decoration-style: dotted;
     text-underline-offset: 4px;
   }
 }
@@ -197,6 +198,7 @@
       font-weight: var(--font-weight-bold);
       gap: 4px;
       padding: 8px 12px;
+      text-decoration: none;
       transition-property: box-shadow, color;
       transition-duration: 300ms;
       transition-timing-function: ease;
