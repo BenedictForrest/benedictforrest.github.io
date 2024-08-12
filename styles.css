@@ -148,7 +148,7 @@
 @layer layout {
   .layout {
     display: grid;
-    gap: 64px 32px;
+    gap: 64px max(32px, env(safe-area-inset-right));
     grid-template-columns: 0 1fr 0;
     margin-inline: auto;
     max-inline-size: 1024px;
@@ -157,7 +157,7 @@
     @media (752px <= width) {
       grid-template-columns: repeat(6, 1fr);
       padding: 56px 56px 96px 56px;
-      row-gap: 96px;
+      gap: 96px 32px;
     }
 
     @media (1184px <= width) {
