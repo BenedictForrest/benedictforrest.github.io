@@ -8,12 +8,14 @@
 
 @layer variables {
   :root {
-    --color-text-primary: #2d2c28;
-    --color-text-secondary: #575653;
-    --color-background-website: #fff;
-    --color-background-highlight: #f7f7f6;
-    --color-border: #e6e6e5;
-    --color-shadow: rgba(0, 0, 0, 0.04);
+    color-scheme: light dark;
+
+    --color-text-primary: light-dark(#2d2c28, #fff);
+    --color-text-secondary: light-dark(#575653, #ababa9);
+    --color-background-website: light-dark(#fff, #2d2c28);
+    --color-background-highlight: light-dark(#f7f7f6, #31302c);
+    --color-border: light-dark(#e6e6e5, #464542);
+    --color-shadow: light-dark(rgba(0, 0, 0, 0.04));
 
     --font-family-body: "Lato", sans-serif;
 
@@ -34,17 +36,6 @@
     --grid-column-full-width: 1 / -1;
     --grid-column-text-width: 2 / -2;
     --grid-column-half-width: span 3;
-  }
-
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --color-text-primary: #fff;
-      --color-text-secondary: #ababa9;
-      --color-background-website: #2d2c28;
-      --color-background-highlight: #31302c;
-      --color-border: #464542;
-      --color-shadow: rgba(0, 0, 0, 0.04);
-    }
   }
 }
 
