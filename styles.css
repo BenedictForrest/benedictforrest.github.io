@@ -319,4 +319,12 @@
       font-size: var(--font-size-small);
     }
   }
+
+  @layer memoji {
+    .memoji {
+      block-size: 6rem;
+      inline-size: 6rem;
+      margin-inline: auto;
+    }
+  }
 }
