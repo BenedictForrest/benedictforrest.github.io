@@ -161,8 +161,15 @@
   .nav {
     align-items: center;
     display: flex;
+    flex-direction: column;
+    gap: 16px;
     grid-column: var(--grid-column-text-width);
-    justify-content: space-between;
+
+    @media (420px <= width) {
+      flex-direction: row;
+      gap: 0px;
+      justify-content: space-between;
+    }
 
     @media (752px <= width) {
       grid-column: var(--grid-column-full-width);
