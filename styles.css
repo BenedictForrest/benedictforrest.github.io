@@ -165,14 +165,11 @@
     gap: 16px;
     grid-column: var(--grid-column-text-width);
 
-    @media (420px <= width) {
+    @media (752px <= width) {
       flex-direction: row;
       gap: 0px;
-      justify-content: space-between;
-    }
-
-    @media (752px <= width) {
       grid-column: var(--grid-column-full-width);
+      justify-content: space-between;
     }
   }
 
@@ -241,6 +238,7 @@
       font-weight: var(--font-weight-bold);
       gap: 4px;
       padding: 8px 12px;
+      text-align: center;
       transition-property: box-shadow, color;
       transition-duration: 300ms;
       transition-timing-function: ease;
