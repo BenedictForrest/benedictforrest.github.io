@@ -44,65 +44,70 @@
           <a href="/">Benedict Forrest</a>
         </strong>
         <div class="flex gap-8">
-          <a class="button" href="/thoughts/">🧠 Thoughts</a>
-          <a class="button" href="/about/" aria-current="page">🧑‍💻 About</a>
+          <a class="button" href="/thoughts/" aria-current="page"
+            >🧠 Thoughts</a
+          >
+          <a class="button" href="/about/">🧑‍💻 About</a>
         </div>
       </nav>
 
       <!-- Article -->
       <article class="article">
+        <header class="section">
+          <div class="text">
+            <a href="/thoughts/" class="button">
+              <svg width="20" height="20" viewBox="0 0 20 20">
+                <path
+                  d="M9.42417 4.57564C9.65848 4.80995 9.65848 5.18985 9.42417 5.42417L5.44843 9.3999H14.9999C15.3313 9.3999 15.5999 9.66853 15.5999 9.9999C15.5999 10.3313 15.3313 10.5999 14.9999 10.5999H5.44843L9.42417 14.5756C9.65848 14.81 9.65848 15.1899 9.42417 15.4242C9.18985 15.6585 8.80995 15.6585 8.57564 15.4242L3.57564 10.4242C3.34132 10.1899 3.34132 9.80995 3.57564 9.57564L8.57564 4.57564C8.80995 4.34132 9.18985 4.34132 9.42417 4.57564Z"
+                />
+              </svg>
+              Back</a
+            >
+            <h1>Using Variables for Icon Sets</h1>
+          </div>
+        </header>
+        <section class="section gallery">
+          <figure class="figure">
+            <video
+              autoplay
+              controls
+              loop
+              class="figure-video"
+              poster="preview.png"
+              style="view-transition-name: thoughts-icv-preview"
+            >
+              <source src="video.mp4" type="video/mp4" />
+            </video>
+          </figure>
+        </section>
         <section class="section">
           <div class="text">
-            <h1>Get to know me more.</h1>
             <p>
-              I've been designing and coding for the web for 17 years. That's so
-              long ago, that when I was learning web development I was using
-              Dreamweaver (and it was still owned by Macromedia). I've done it
-              all from creating custom HTML email template (by hand, all in
-              tables) to maintaining design systems with 100+ components for
-              global SaaS companies.
+              It used to be that the different styled icons were separate
+              components and you would use instance swapping to change them out,
+              and that was okay. Then component props came along and changed
+              that for the better. Now you can use the props to easily change
+              the style, and that's how the majority of icon set in the Figma
+              Community are made to this day. But I think we can do better.
             </p>
             <p>
-              I do my best work when I'm with a small team of enthusiastic,
-              hard-working people, who really believe that their product is
-              going to change the world. I'm a get-shit-done'r, who excels in a
-              fast-paced, agile team who want to take the design of their app to
-              the next level.
+              The downside to the prop approach is that you still need to update
+              each component individually. And sure, it might be nice to have
+              that freedom to mix-and-match, but 99% of the time you are just
+              going to use the same style. And when you need to change 20, 30,
+              40 or more icons in your file to a different style, and you have
+              to do them one at a time, you will know that we need to do better.
             </p>
-          </div>
-        </section>
-        <section class="section highlight">
-          <div class="text">
-            <h2>What I believe.</h2>
-            <div class="flex column gap-8">
-              <h3>🧑‍🎨 Design belongs to everyone.</h3>
-              <p>
-                I encourage everyone in the company to be involved in the design
-                process. The more buy-in everybody has about the design of the
-                product, the stronger it will be. And I believe it's part of the
-                role of designers to teach everyone how to make good decisions
-                for their users.
-              </p>
-            </div>
-            <div class="flex column gap-8">
-              <h3>🤯 We're more than just our jobs.</h3>
-              <p>
-                If you work with me, you won't just be working with a designer.
-                You also being working with some that love to: eat snacks; goof
-                around in the office; bring in baked goods; organise team
-                lunches; play Dungeons & Dragons; start playing a lot of video
-                games but never finish them.
-              </p>
-            </div>
-            <div class="flex column gap-8">
-              <h3>🙌 Don't be an asshole.</h3>
-              <p>
-                The workplace (whether it's physical or digital) needs to be a
-                safe environment, where everyone feels encouraged to share their
-                ideas and opinions. Everyone deserves to be treated with respect
-                and empathy, and toxicity has no place in, or outside, of work.
-              </p>
-            </div>
+            <p>
+              In this experiment I leverage the power of Figma's Variables
+              feature to change the style of all the icons in a frame at once.
+              By using different values for different modes I can control the
+              style of the icons whether at the granular style level, by
+              changing which layers are visible, or changing the select prop
+              value. Plus, I can still mix-and-match styles by applying
+              different modes at lower levels, even directly on to the instance
+              of the icon component itself.
+            </p>
           </div>
         </section>
       </article>

@@ -258,7 +258,8 @@
       }
     }
 
-    .figure-image {
+    .figure-image,
+    .figure-video {
       grid-column: inherit;
     }
 
