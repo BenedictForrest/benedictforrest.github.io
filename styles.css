@@ -185,6 +185,13 @@
     }
   }
 
+  .nav-home {
+    align-items: center;
+    display: flex;
+    font-weight: var(--font-weight-bold);
+    gap: 16px;
+  }
+
   .article {
     display: grid;
     grid-column: var(--grid-column-full-width);
@@ -344,9 +351,15 @@
 
   @layer memoji {
     .memoji {
-      block-size: 6rem;
-      inline-size: 6rem;
+      inline-size: 96px;
       margin-inline: auto;
+
+      &:is(.small) {
+        background-color: var(--color-background-highlight);
+        border-radius: 12px;
+        inline-size: 48px;
+        padding: 4px;
+      }
     }
   }
 }
