@@ -18,11 +18,13 @@
     --color-shadow: light-dark(rgba(0, 0, 0, 0.04));
 
     --font-family-body: "Lato", sans-serif;
+    --font-family-code: monospace;
 
     --font-size-h1: clamp(24px, 3.90625vw, 40px);
     --font-size-h2: clamp(20px, 3.125vw, 32px);
     --font-size-h3: clamp(18px, 2.34375vw, 24px);
     --font-size-body: 18px;
+    --font-size-code: 16px;
     --font-size-small: 14px;
 
     --font-weight-xbold: 900;
@@ -127,6 +129,16 @@
     font-size: var(--font-size-small);
     line-height: var(--line-height-small);
     text-align: center;
+  }
+
+  kbd {
+    background-color: var(--color-background-highlight);
+    border: thin solid var(--color-border);
+    border-radius: 4px;
+    box-shadow: 0 2px 4px var(--color-shadow);
+    font-family: var(--font-family-code);
+    font-size: var(--font-size-code);
+    padding-inline: 4px;
   }
 
   .link {
