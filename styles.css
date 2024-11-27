@@ -189,13 +189,6 @@
     }
   }
 
-  .nav-home {
-    align-items: center;
-    display: flex;
-    font-weight: var(--font-weight-bold);
-    gap: 16px;
-  }
-
   .article {
     display: grid;
     grid-column: var(--grid-column-full-width);
@@ -307,8 +300,16 @@
         flex-direction: column;
       }
 
+      &:where(.center) {
+        align-items: center;
+      }
+
       &:where(.gap-8) {
         gap: 8px;
+      }
+
+      &:where(.gap-16) {
+        gap: 16px;
       }
 
       &:where(.gap-24) {
