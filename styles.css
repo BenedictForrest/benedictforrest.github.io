@@ -254,7 +254,7 @@
 @layer components {
   @layer button {
     .button {
-      border-radius: 5px;
+      border-radius: 6px;
       color: var(--color-text-secondary);
       display: flex;
       font-size: var(--font-size-small);
