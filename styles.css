@@ -160,7 +160,7 @@
     grid-template-columns: 0 1fr 0;
     margin-inline: auto;
     max-inline-size: 1024px;
-    padding-block: 32px 64px;
+    padding-block: 48px 64px;
 
     @media (752px <= width) {
       grid-template-columns: repeat(6, 1fr);
@@ -178,7 +178,7 @@
     align-items: center;
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 32px;
     grid-column: var(--grid-column-text-width);
 
     @media (752px <= width) {
@@ -362,15 +362,14 @@
       &:is(.small) {
         background-color: var(--color-background-highlight);
         border-radius: 12px;
-        inline-size: 48px;
+        inline-size: 56px;
         padding: 4px;
       }
     }
   }
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  @layer animation {
+@layer animation {
+  @media (prefers-reduced-motion: no-preference) {
     @keyframes scale-fade-in {
       from {
         transform: scale(0.75);
