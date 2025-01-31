@@ -346,6 +346,7 @@
 
     .project-title {
       font-weight: var(--font-weight-bold);
+      text-wrap: balance;
     }
 
     .project-description {
