@@ -1,0 +1,150 @@
+body {
+    -webkit-text-size-adjust: none;
+    color: #14141a;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0;
+    padding: 16px;
+}
+
+:is(h1, h2, h3, h4, h5, h6) {
+    font-weight: 600;
+    margin-block: 0;
+}
+
+h1 {
+    font-size: 32px;
+    line-height: 40px;
+
+    @media (width > 800px) {
+        font-size: 40px;
+        line-height: 48px;
+    }
+}
+
+p {
+    margin: 0;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-inline: auto;
+    max-inline-size: 1140px;
+}
+
+.memoji {
+    block-size: 56px;
+    inline-size: 56px;
+}
+
+.intro {
+    block-size: 50vh;
+    display: flex;
+    flex-direction: column;
+    padding: 48px 32px;
+    row-gap: 24px;
+}
+
+.projects {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 16px;
+
+    /* @media (width > 800px) {
+        flex-direction: row;
+    } */
+}
+
+.project {
+    justify-items: start;
+    aspect-ratio: 16 / 9;
+    background-color: #f7f7f7;
+    box-sizing: border-box;
+    border-radius: 8px;
+    display: grid;
+    grid-template:
+        "meta   image" min-content
+        "title  image" min-content
+        "button image" min-content
+        "tags   image" 1fr
+        / 2fr 1fr;
+    padding: 48px;
+    transition: opacity 300ms ease;
+}
+
+.project-meta,
+.project-tags {
+    color: rgba(20, 20, 26, 0.5);
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 16px;
+}
+
+.project-meta {
+    grid-area: meta;
+}
+
+.project-tags {
+    align-self: end;
+    grid-area: tags;
+}
+
+.project-title {
+    font-size: 24px;
+    grid-area: title;
+    line-height: 32px;
+    margin-block: 8px 16px;
+    text-wrap: balance;
+
+    @media (width > 800px) {
+        font-size: 40px;
+        line-height: 48px;
+    }
+}
+
+.project-button {
+    border-radius: 6px;
+    box-shadow: inset 0 0 0 2px currentColor;
+    display: inline-flex;
+    font-weight: 600;
+    gap: 8px;
+    grid-area: button;
+    padding: 8px 16px;
+    transition-property: background-color;
+    transition-duration: 300ms;
+    transition-timing-function: ease;
+
+    &::after {
+        content: "→";
+    }
+
+    &:hover {
+        background-color: rgba(20, 20, 26, 0.1);
+    }
+}
+
+@layer animation {
+    @media (prefers-reduced-motion: no-preference) {
+        @keyframes scale-fade-in {
+            from {
+                opacity: 0;
+                transform: scale(0.75);
+            }
+        }
+
+        .project {
+            animation: scale-fade-in ease-out both;
+            animation-timeline: view();
+            animation-range: 0% 20%;
+        }
+    }
+}
