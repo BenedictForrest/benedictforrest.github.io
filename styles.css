@@ -50,6 +50,7 @@
     font-size: inherit;
     font-weight: inherit;
     margin-block: 0;
+    text-wrap: balance;
   }
 
   p {
@@ -358,7 +359,6 @@
   @layer memoji {
     .memoji {
       inline-size: 96px;
-      margin-inline: auto;
 
       &:is(.small) {
         background-color: var(--color-background-highlight);
