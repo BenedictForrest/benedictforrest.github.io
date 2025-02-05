@@ -274,13 +274,9 @@
   @layer figure {
     .figure {
       display: grid;
-      grid-column: var(--grid-column-half-width);
+      grid-column: var(--grid-column-full-width);
       grid-template-columns: subgrid;
       row-gap: 16px;
-
-      &:where(:only-of-type) {
-        grid-column: var(--grid-column-full-width);
-      }
     }
 
     .figure-image,
