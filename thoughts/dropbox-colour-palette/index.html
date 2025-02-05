@@ -53,9 +53,7 @@
         </a>
         <div class="flex gap-8">
           <a class="button" href="/">💼 Work</a>
-          <a class="button" href="/thoughts/" aria-current="page"
-            >🧠 Thoughts</a
-          >
+          <a class="button" href="/thoughts/">🧠 Thoughts</a>
           <a class="button" href="/about/">🧑‍💻 About</a>
         </div>
       </nav>
@@ -64,84 +62,55 @@
       <article class="article">
         <header class="section">
           <div class="text">
-            <img src="/assets/memoji/thoughts.png" class="memoji" />
-            <h1>
-              Hi, I'm Benedict.
-              <div>I use Figma &amp; HTML/CSS to explore ideas.</div>
-            </h1>
+            <a href="/thoughts/" class="button">
+              <svg width="20" height="20" viewBox="0 0 20 20">
+                <path
+                  d="M9.42417 4.57564C9.65848 4.80995 9.65848 5.18985 9.42417 5.42417L5.44843 9.3999H14.9999C15.3313 9.3999 15.5999 9.66853 15.5999 9.9999C15.5999 10.3313 15.3313 10.5999 14.9999 10.5999H5.44843L9.42417 14.5756C9.65848 14.81 9.65848 15.1899 9.42417 15.4242C9.18985 15.6585 8.80995 15.6585 8.57564 15.4242L3.57564 10.4242C3.34132 10.1899 3.34132 9.80995 3.57564 9.57564L8.57564 4.57564C8.80995 4.34132 9.18985 4.34132 9.42417 4.57564Z"
+                />
+              </svg>
+              Back</a
+            >
+            <h1>CSS Only Dropbox Colour Palette Hover Effect</h1>
           </div>
         </header>
         <section class="section gallery">
-          <a href="/thoughts/dropbox-colour-palette/" class="project">
-            <img
-              class="project-image"
-              src="/thoughts/dropbox-colour-palette/preview.png"
-              style="view-transition-name: thoughts-dcp-preview"
-            />
-            <div class="project-details">
-              <div class="project-title">
-                CSS only dropbox colour palette hover effect
-              </div>
-            </div>
-          </a>
-          <a href="/thoughts/icon-variables/" class="project">
-            <img
-              class="project-image"
-              src="/thoughts/icon-variables/preview.png"
-              style="view-transition-name: thoughts-icv-preview"
-            />
-            <div class="project-details">
-              <div class="project-title">
-                How I use variables for icon sets in Figma
-              </div>
-            </div>
-          </a>
-          <a href="/thoughts/looping-figma-animation/" class="project">
-            <img
-              class="project-image"
-              src="/thoughts/looping-figma-animation/preview.png"
-              style="view-transition-name: thoughts-lfa-preview"
-            />
-            <div class="project-details">
-              <div class="project-title">
-                Creating a looping loading spinner in Figma
-              </div>
-            </div>
-          </a>
-          <a href="/thoughts/scroll-progress-bar/" class="project">
-            <img
-              class="project-image"
-              src="/thoughts/scroll-progress-bar/preview.png"
-              style="view-transition-name: thoughts-spb-preview"
-            />
-            <div class="project-details">
-              <div class="project-title">CSS only page scroll progress bar</div>
-            </div>
-          </a>
-          <a href="/thoughts/better-layer-selecting/" class="project">
-            <img
-              class="project-image"
-              src="/thoughts/better-layer-selecting/preview.png"
-              style="view-transition-name: thoughts-bls-preview"
-            />
-            <div class="project-details">
-              <div class="project-title">
-                The ultimate layer selecting hack in Figma
-              </div>
-            </div>
-          </a>
-          <a href="/thoughts/component-child-width/" class="project">
-            <img
-              class="project-image"
-              src="/thoughts/component-child-width/preview.png"
-              style="view-transition-name: thoughts-ccw-preview"
-            />
-            <div class="project-details">
-              <div class="project-title">
-                Changing width inside a component instance
-              </div>
-            </div>
-          </a>
+          <figure class="figure">
+            <iframe
+              class="figure-embed"
+              scrolling="no"
+              src="https://codepen.io/BenedictForrest/embed/emObxox?default-tab=result"
+              loading="lazy"
+            ></iframe>
+          </figure>
+        </section>
+        <section class="section">
+          <div class="text">
+            <p>
+              Dropbox released a new
+              <a class="link" href="https://brand.dropbox.com"
+                >brand guidelines website</a
+              >
+              that looks amazing! I was particularly fascinated by the cool
+              hover on the colour palette section. After playing with it for
+              about an hour, like a really satisfying fidget toy, I thought to
+              myself: "I bet I could make this in CSS."
+            </p>
+            <p>
+              The effect looks like this: when you hover over one of the
+              swatches it pops up on a slight angle, revealing the name and hex
+              code. On top of that, the two swatches before, and the next swatch
+              after the one you are hover also pop up a small amount. An effect
+              that wouldn't be achievable in CSS 10 years ago, but with the
+              semi-recent <code>:has()</code> this is now possible.
+            </p>
+          </div>
+        </section>
+        <section class="section gallery">
+          <figure class="figure">
+            <video autoplay loop playsinline class="figure-video">
+              <source src="after.mp4" type="video/mp4" />
+            </video>
+          </figure>
         </section>
       </article>
 

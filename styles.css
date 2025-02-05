@@ -83,6 +83,12 @@
     fill: currentColor;
     fill-rule: evenodd;
   }
+
+  iframe {
+    block-size: auto;
+    border: none;
+    inline-size: 100%;
+  }
 }
 
 @layer typography {
@@ -279,13 +285,15 @@
       row-gap: 16px;
     }
 
+    .figure-embed,
     .figure-image,
-    .figure-video {
+    .figure-video,
+    .figure-caption {
       grid-column: inherit;
     }
 
-    .figure-caption {
-      grid-column: inherit;
+    .figure-embed {
+      aspect-ratio: 4 / 3;
     }
   }
 
