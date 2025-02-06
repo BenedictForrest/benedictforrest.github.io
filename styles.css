@@ -89,6 +89,10 @@
     border: none;
     inline-size: 100%;
   }
+
+  dd {
+    margin-inline-start: 0;
+  }
 }
 
 @layer typography {
@@ -157,6 +161,12 @@
     text-decoration: underline;
     text-decoration-style: dotted;
     text-underline-offset: 4px;
+  }
+
+  dt {
+    color: var(--color-text-secondary);
+    font-size: var(--font-size-small);
+    line-height: var(--line-height-small);
   }
 }
 
@@ -242,6 +252,22 @@
       align-items: center;
       text-align: center;
     }
+  }
+
+  .details {
+    display: grid;
+    grid-column: var(--grid-column-text-width);
+    gap: 24px;
+
+    @media (752px <= width) {
+      grid-template-columns: repeat(4, auto);
+    }
+  }
+
+  .details-row {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
   }
 
   .footer {
