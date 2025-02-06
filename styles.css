@@ -62,6 +62,15 @@
     text-decoration: none;
   }
 
+  ul {
+    margin-block: 0;
+    padding-inline-start: 48px;
+  }
+
+  li:not(:first-child) {
+    margin-block-start: 8px;
+  }
+
   blockquote {
     margin: 0;
   }
@@ -92,6 +101,14 @@
 
   dd {
     margin-inline-start: 0;
+  }
+
+  hr {
+    border-color: var(--color-border);
+    border-style: solid;
+    border-width: thin 0 0 0;
+    margin-block: 24px;
+    width: 100%;
   }
 }
 
