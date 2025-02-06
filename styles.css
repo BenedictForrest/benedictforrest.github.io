@@ -260,7 +260,7 @@
     gap: 24px;
 
     @media (752px <= width) {
-      grid-template-columns: repeat(4, auto);
+      grid-template-columns: repeat(3, auto);
     }
   }
 
