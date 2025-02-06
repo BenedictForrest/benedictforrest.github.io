@@ -13,7 +13,7 @@
     --color-text-primary: light-dark(#2d2c28, #fff);
     --color-text-secondary: light-dark(#575653, #ababa9);
     --color-background-website: light-dark(#fff, #2d2c28);
-    --color-background-highlight: light-dark(#f7f7f6, #31302c);
+    --color-background-highlight: light-dark(#f7f7f6, #353431);
     --color-border: light-dark(#e6e6e5, #464542);
     --color-shadow: rgba(0, 0, 0, 0.04);
 
@@ -318,6 +318,10 @@
       grid-column: inherit;
     }
 
+    .figure-image {
+      background-color: var(--color-background-highlight);
+    }
+
     .figure-embed {
       aspect-ratio: 4 / 3;
     }
@@ -364,6 +368,7 @@
     }
 
     .project-image {
+      background-color: var(--color-background-highlight);
       grid-column: inherit;
     }
 
