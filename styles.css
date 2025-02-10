@@ -259,7 +259,6 @@
   }
 
   .text {
-    align-items: start;
     display: flex;
     flex-direction: column;
     grid-column: var(--grid-column-text-width);
@@ -273,7 +272,6 @@
 
   .details {
     display: grid;
-    grid-column: var(--grid-column-text-width);
     gap: 24px;
 
     @media (752px <= width) {
@@ -297,6 +295,7 @@
 @layer components {
   @layer button {
     .button {
+      align-self: start;
       border-radius: 6px;
       color: var(--color-text-secondary);
       display: flex;
