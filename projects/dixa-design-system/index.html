@@ -118,9 +118,7 @@
             <hr />
             <p><strong>Goals</strong></p>
             <ul>
-              <li>
-                Achieving a 1-to-1 match between Figma and live components
-              </li>
+              <li>Achieving consistency between Figma and live components</li>
               <li>Ensuring components are easy to find, understand and use</li>
               <li>
                 Future-proofing components by making them more powerful and
@@ -132,16 +130,18 @@
         </section>
         <section class="section">
           <div class="text">
-            <h2>The Challenge</h2>
+            <h2>Taking stock of the situation</h2>
             <p>
-              When I joined the Dixa design team the Figma Design System was
-              poorly maintained, missing components, did not accurately reflect
-              the implemented components and had no dedicated maintainer.
+              I started by getting a comprehensive understanding of the current
+              components, both in Figma and the developer's Storybook instance.
+              I created a Notion board to track the progress of each component
+              and to document any issues or missing properties.
             </p>
             <p>
-              This caused designers to frequently detach instances of components
-              to modify them and even create components from scratch, this
-              frustrated designers and slowed down the design process.
+              This board made it easy to communicate and sync with other
+              designers and developers on the team. It also provided a way for
+              team members to request new components or new properties for
+              existing components.
             </p>
           </div>
         </section>
@@ -160,19 +160,20 @@
         </section>
         <section class="section">
           <div class="text">
-            <h2>The Solution</h2>
+            <h2>Consistency without rigidity</h2>
             <p>
-              Being passionate about design systems I volunteered to become the
-              dedicated maintainer of the design system and worked with the Head
-              of Product Design to identify key areas of improvement and created
-              a plan to address them.
+              Initially I focused on creating a perfect 1-to-1 match between
+              Figma and dev components, both visually and in terms of properties
+              and organisation. While this seemed like the best approach at
+              first, it became apparent that this would not be truly achievable
+              or sustainable in the long run.
             </p>
             <p>
-              I began by doing a comprehensive audit of the existing components,
-              identifying missing components, and addressing differences between
-              Figma and live components. I also rebuilt the component in Figma
-              to utilise the latest features like Auto Layout, Variants, Text
-              and Boolean Props, and Instance Swaps.
+              Figma and React are not the same thing. Embracing that fundamental
+              truth allowed me to build components that fully made use of
+              Figma's capabilities and limitations. Letting each libraries be
+              the best versions of themselves ensured that future headaches
+              didn't snowball into a broken, mismatched system again.
             </p>
           </div>
         </section>
