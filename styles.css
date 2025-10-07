@@ -37,6 +37,9 @@
     --grid-column-full-width: 1 / -1;
     --grid-column-text-width: 2 / -2;
     --grid-column-half-width: span 3;
+
+    --radius-medium: 16px;
+    --radius-large: 24px;
   }
 }
 
@@ -244,6 +247,7 @@
 
     &:where(.highlight) {
       background-color: var(--color-background-highlight);
+      border-radius: var(--radius-large);
       padding-block: 32px;
 
       @media (752px <= width) {
@@ -295,7 +299,7 @@
     .button {
       align-items: center;
       align-self: start;
-      border-radius: 6px;
+      border-radius: 20px;
       color: var(--color-text-secondary);
       display: flex;
       font-size: var(--font-size-small);
@@ -326,7 +330,11 @@
 
     .figure-embed,
     .figure-image,
-    .figure-video,
+    .figure-video {
+      border-radius: var(--radius-large);
+      grid-column: inherit;
+    }
+
     .figure-caption {
       grid-column: inherit;
     }
@@ -382,6 +390,7 @@
 
     .project-image {
       background-color: var(--color-background-highlight);
+      border-radius: var(--radius-medium);
       grid-column: inherit;
     }
 
