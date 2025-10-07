@@ -211,15 +211,13 @@
   .nav {
     align-items: center;
     display: flex;
-    flex-direction: column;
-    gap: 32px;
+    flex-direction: row;
+    gap: 8px;
     grid-column: var(--grid-column-text-width);
+    justify-content: center;
 
     @media (752px <= width) {
-      flex-direction: row;
-      gap: 0px;
       grid-column: var(--grid-column-full-width);
-      justify-content: space-between;
     }
   }
 
@@ -295,6 +293,7 @@
 @layer components {
   @layer button {
     .button {
+      align-items: center;
       align-self: start;
       border-radius: 6px;
       color: var(--color-text-secondary);
@@ -302,17 +301,15 @@
       font-size: var(--font-size-small);
       font-weight: var(--font-weight-bold);
       gap: 4px;
-      padding: 8px 12px;
+      justify-content: center;
+      line-height: 24px;
+      padding: 8px 16px;
       text-align: center;
-      transition-property: box-shadow, color;
+      transition-property: background-color, color;
       transition-duration: 300ms;
       transition-timing-function: ease;
 
       &:is(:hover, [aria-current]) {
-        box-shadow: inset 0 0 0 1px var(--color-border),
-          0 2px 4px var(--color-shadow);
-      }
-      &:is([aria-current]) {
         background-color: var(--color-background-highlight);
         color: var(--color-text-primary);
       }
